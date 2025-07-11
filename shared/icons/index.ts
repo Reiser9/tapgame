@@ -10,3 +10,7 @@ export { ArrowRightTop } from "./ArrowRightTop";
 export { Twitter } from "./Twitter";
 export { Reload } from "./Reload";
 export { Check } from "./Check";
+export { Close } from "./Close";
+export { Ticket } from "./Ticket";
+export { Peoples } from "./Peoples";
+export { Blank } from "./Blank";
