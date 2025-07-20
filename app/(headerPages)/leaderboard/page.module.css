@@ -1,0 +1,260 @@
+.leaderboard{
+    background: #E7E4FF;
+    padding: 5rem 0rem 8rem 0;
+    border-radius: 36px 36px 0 0;
+    min-height: calc(100dvh - 95px);
+}
+
+@media (max-width: 1400px) {
+    .leaderboard{
+        min-height: calc(100dvh - 84px);
+    }
+}
+@media (max-width: 1200px) {
+    .leaderboard{
+        min-height: calc(100dvh - 78px);
+    }
+}
+@media (max-width: 998px) {
+    .leaderboard{
+        min-height: calc(100dvh - 57px);
+    }
+}
+@media (max-width: 768px) {
+    .leaderboard{
+        border-radius: 20px 20px 0 0;
+    }
+}
+
+.leaderboardInner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.leaderboardTitleInner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.leaderboardTitle{
+    font-size: 6.4rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .leaderboardTitle{
+        font-size: 4.2rem;
+    }
+}
+
+.leaderboardText{
+    font-size: 3.6rem;
+    font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .leaderboardText{
+        font-size: 2.6rem;
+    }
+}
+
+.leaderboardTable{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: 4rem;
+}
+
+@media (max-width: 998px) {
+    .leaderboardTable{
+        overflow-x: auto;
+    }
+}
+
+.leaderboardTableHeader, .leaderboardTableItem{
+    width: 100%;
+    background: #3E3949;
+    padding: 1.1rem 3rem;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 998px) {
+    .leaderboardTableHeader, .leaderboardTableItem{
+        width: 998px;
+        flex-shrink: 0;
+    }
+}
+
+.leaderboardTableItem{
+    background: #fff;
+    padding: 2rem 3rem;
+}
+
+.leaderboardTableHeader p{
+    color: #E7E5FB;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0rem 0.4rem;
+}
+
+.leaderboardTableItem p{
+    color: #18222E;
+    text-align: center;
+}
+
+.leaderboardTableHeader p:first-child, .leaderboardTableItem p:first-child{
+    text-align: left;
+}
+
+.leaderboardTableHeader p:last-child, .leaderboardTableItem p:last-child{
+    text-align: right;
+}
+
+.leaderboardTableHeader p:first-child, .leaderboardTableHeader p:last-child,
+.leaderboardTableItem p:first-child, .leaderboardTableItem p:last-child{
+    padding: 0;
+}
+
+.leaderboardTableRank{
+    width: 10%;
+}
+
+.leaderboardTableItem .leaderboardTableRank{
+    display: flex;
+    align-items: center;
+    color: #A008BF;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.leaderboardTableCont{
+    width: 15%;
+}
+
+.leaderboardTableItem .leaderboardTableCont{
+    font-weight: 300;
+}
+
+.leaderboardTableScore{
+    width: 10%;
+}
+
+.leaderboardTableItem .leaderboardTableScore{
+    font-weight: 600;
+    color: #000;
+}
+
+.leaderboardTableCult{
+    width: 12.5%;
+}
+
+.leaderboardTableLine{
+    width: 100%;
+    height: 15px;
+    border-radius: 50px;
+    background: #18222E;
+    outline: 1px solid #18222E;
+    position: relative;
+}
+
+.leaderboardTableProgress{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(to right, #fff, #DB27FF);
+    transition: .2s linear;
+}
+
+.leaderboardTableTrack{
+    width: 10%;
+}
+
+.leaderboardTableItem .leaderboardTableTrack{
+    font-weight: 500;
+}
+
+.leaderboardTableUniq{
+    width: 12.5%;
+}
+
+.leaderboardTableItem .leaderboardTableUniq{
+    font-weight: 500;
+}
+
+.leaderboardTableHourse{
+    width: 15%;
+}
+
+.leaderboardTableItem .leaderboardTableHourse{
+    font-weight: 500;
+}
+
+.leaderboardTableLast{
+    width: 15%;
+}
+
+.leaderboardTableItem .leaderboardTableLast{
+    font-weight: 500;
+}
+
+.leaderboardPagin{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 3.5rem;
+}
+
+.leaderboardPaginButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem;
+    color: rgba(24, 34, 46, .6);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.leaderboardPaginNumber{
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    border: 1px solid #18222E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #18222E;
+    font-weight: 500;
+}
+
+.leaderboardPaginNumber.active, .leaderboardPaginNumber:hover{
+    background: #18222E;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .leaderboardPaginNumber{
+        width: 34px;
+        height: 34px;
+        font-size: 1.4rem;
+    }
+}
+
+.leaderboardPaginDots{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: auto;
+}

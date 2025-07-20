@@ -4,21 +4,26 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import cn from "classnames";
+import { usePathname } from "next/navigation";
 
 import styles from "./index.module.css";
 import base from "@/shared/styles/base.module.css";
 
 import {
     Dashboard,
-    Logo,
     Link as LinkIcon,
-    Database,
-    Target,
     Wallet,
     Notify,
+    Logo2,
+    Star,
+    Staking,
+    Chart,
+    Burn,
 } from "@/shared/icons";
 
 const Header = () => {
+    const pathname = usePathname();
+
     return (
         <header className={styles.header}>
             <Image
@@ -31,46 +36,103 @@ const Header = () => {
             <div className={base.container}>
                 <div className={styles.headerInner}>
                     <Link href="/" className={styles.headerLogo}>
-                        <Logo />
-                        Vibin
+                        <Logo2 />
+                        Vibin&apos;
                     </Link>
 
                     <nav className={styles.headerNav}>
                         <Link
                             href="/"
-                            className={cn(
-                                styles.headerNavLink,
-                                styles.disabled
-                            )}
+                            className={cn(styles.headerNavLink, {
+                                [styles.active]: pathname === "/",
+                            })}
                         >
                             <Dashboard />
+
+                            <span className={styles.headerNavLinkWrap}>
+                                <span className={styles.headerNavLinkText}>
+                                    Dashboard
+                                </span>
+                            </span>
                         </Link>
 
                         <Link
-                            href="/"
-                            className={cn(styles.headerNavLink, styles.active)}
+                            href="/quest"
+                            className={cn(styles.headerNavLink, {
+                                [styles.active]: pathname === "/quest",
+                            })}
+                        >
+                            <Star />
+
+                            <span className={styles.headerNavLinkWrap}>
+                                <span className={styles.headerNavLinkText}>
+                                    Quest
+                                </span>
+                            </span>
+                        </Link>
+
+                        <Link
+                            href="/staking"
+                            className={cn(styles.headerNavLink, {
+                                [styles.active]: pathname === "/staking",
+                            })}
+                        >
+                            <Staking />
+
+                            <span className={styles.headerNavLinkWrap}>
+                                <span className={styles.headerNavLinkText}>
+                                    Staking
+                                </span>
+                            </span>
+                        </Link>
+
+                        <Link
+                            href="/referal"
+                            className={cn(styles.headerNavLink, {
+                                [styles.active]: pathname === "/referal",
+                            })}
                         >
                             <LinkIcon />
+
+                            <span className={styles.headerNavLinkWrap}>
+                                <span className={styles.headerNavLinkText}>
+                                    Referal
+                                </span>
+                            </span>
                         </Link>
 
                         <Link
-                            href="/"
+                            href="/leaderboard"
+                            className={cn(styles.headerNavLink, {
+                                [styles.active]: pathname === "/leaderboard",
+                            })}
+                        >
+                            <Chart />
+
+                            <span className={styles.headerNavLinkWrap}>
+                                <span className={styles.headerNavLinkText}>
+                                    Leaderboard
+                                </span>
+                            </span>
+                        </Link>
+
+                        <Link
+                            href="/referal"
                             className={cn(
                                 styles.headerNavLink,
                                 styles.disabled
                             )}
                         >
-                            <Database />
-                        </Link>
+                            <Burn />
 
-                        <Link
-                            href="/"
-                            className={cn(
-                                styles.headerNavLink,
-                                styles.disabled
-                            )}
-                        >
-                            <Target />
+                            <span className={styles.headerNavLinkWrap}>
+                                <span className={styles.headerNavLinkText}>
+                                    Burn
+                                </span>
+                                <span className={styles.headerNavLinkTextSoon}>
+                                    Coming soon
+                                </span>
+                            </span>
                         </Link>
                     </nav>
 
@@ -81,10 +143,10 @@ const Header = () => {
                             <span>1</span>
                         </button>
 
-                        <button className={styles.headerConnect}>
+                        <Link href="/login" className={styles.headerConnect}>
                             <Wallet />
                             Connect Wallet
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

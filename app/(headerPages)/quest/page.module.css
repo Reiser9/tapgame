@@ -3,9 +3,24 @@
     background: #E7E4FF;
     border-radius: 36px 36px 0 0;
     padding: 3rem 0;
-    min-height: calc(100dvh - 82px);
+    min-height: calc(100dvh - 95px);
 }
 
+@media (max-width: 1400px) {
+    .main{
+        min-height: calc(100dvh - 84px);
+    }
+}
+@media (max-width: 1200px) {
+    .main{
+        min-height: calc(100dvh - 78px);
+    }
+}
+@media (max-width: 998px) {
+    .main{
+        min-height: calc(100dvh - 57px);
+    }
+}
 @media (max-width: 768px) {
     .main{
         border-radius: 20px 20px 0 0;

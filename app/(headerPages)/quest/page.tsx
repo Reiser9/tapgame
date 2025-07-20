@@ -23,7 +23,7 @@ import { TaskItem } from "@/shared/ui/TaskItem";
 import { GameTouch } from "@/widgets/GameTouch";
 import { Modal } from "@/shared/ui/Modal";
 
-export default function Home() {
+const QuestPage = () => {
     const [accessModal, setAccessModal] = React.useState(false);
 
     React.useEffect(() => {
@@ -547,4 +547,6 @@ export default function Home() {
             )}
         </>
     );
-}
+};
+
+export default QuestPage;
